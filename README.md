@@ -29,19 +29,18 @@ if __name__ == '__main__':
   for model in [“BPR”]:  #Specify model here
     dataset = "ml-100k"  #Specify dataset here
     base_config_dict = { #Specify selectively loading data here. Keys are the suffix of loaded atomic files, values are the field name list to be loaded
-
-    'load_col': {'inter': ['user_id', 'item_id', 'rating', 'timestamp'], 
-                 'user': ['user_id', 'age', 'gender','occupation'],
-                 'item': ['item_id', 'release_year', 'class']}
+      'load_col': {
+        'inter': ['user_id', 'item_id', 'rating', 'timestamp'], 
+        'user': ['user_id', 'age', 'gender','occupation'],
+        'item': ['item_id', 'release_year', 'class']}
     }
     robustness_dict = {  #Specify the robustnes test here. This example shows slicing based on user feature
-
-    "slice": {
-      "by_feature": {
-        "occupation": {"equal": "student"}
+      "slice": {
+        "by_feature": {
+          "occupation": {"equal": "student"}
+        }
+      }
     }
-  }
-}
 results = train_and_test(model=model, dataset=dataset,
 robustness_tests=robustness_dict,
 base_config_dict=base_config_dict, save_model=False)

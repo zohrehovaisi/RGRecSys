@@ -42,9 +42,14 @@ if __name__ == '__main__':
         }
       }
     }
-results = train_and_test(model=model, dataset=dataset,
-robustness_tests=robustness_dict,
-base_config_dict=base_config_dict, save_model=False)
+    result = train_and_test(
+      model=model, 
+      dataset=dataset,
+      robustness_tests=robustness_dict,
+      base_config_dict=base_config_dict, 
+      save_model=False
+    )
+    all_results.append(result)
 ```
 
 Below is more examples of different robustness test formatting:

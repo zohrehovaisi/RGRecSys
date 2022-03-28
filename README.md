@@ -16,3 +16,5 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 - tensorboard>=2.5.0
 
 ## Usage
+
+1. If you want to use datasets other than "ml-100k", you need to use recbole library to get the atomic files. Otherwise, you can skip this step. The atomic files provides a data representation for different recommendation algorithms including .INTER, .USER, and .ITEM. See this[https://dl.acm.org/doi/abs/10.1145/3459637.3482016] for more information.

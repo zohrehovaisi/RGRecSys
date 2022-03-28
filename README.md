@@ -1,5 +1,5 @@
 # RGRecSys
-RGRecSys is developed using RecBole [1] (v0.2.1.) built-in models and covers several models from general and context-aware recommender systems. It has a robustness evaluation module that allows users to easily and uniformly evaluate recommender system robustness. 
+RGRecSys is developed using v0.2.1. version of [RecBole library] (https://github.com/RUCAIBox/RecBole/archive/refs/tags/v0.2.1.zip) built-in models and covers several models from general and context-aware recommender systems. It has a robustness evaluation module that allows users to easily and uniformly evaluate recommender system robustness. 
 ## Requirements
 As RGRecSys is built using the RecBole library, it has the same requirements as RecBole:
 

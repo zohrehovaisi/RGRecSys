@@ -54,7 +54,7 @@ Below is more examples of different robustness test formatting:
 ###### Slice Test Data by Feature
 
 ```python
-#Ex: slice of users whose occupation is student
+#Ex: A slice of users whose occupation is student
 #Format: ”user feature”: {“equal, min, or max”: “value”}
 "slice": {
   "by_feature": {
@@ -65,7 +65,7 @@ Below is more examples of different robustness test formatting:
 ###### Slice Test Data by Interaction
 
 ```python
-#Ex: slice of users whose number of interaction is more than 50
+#Ex: A slice of users whose number of interactions is more than 50
 #Format: ”user”: {“equal, min, or max”: # interactions}
 "slice": {
   "by_inter": {
@@ -77,7 +77,7 @@ Below is more examples of different robustness test formatting:
 ###### Sparsify the Training Data
 
 ```python
-#Ex: randomly drop 25% of interactions for users whose number of interaction is more than 10
+#Ex: randomly drop 25% of interactions for users whose number of interactions is more than 10
 #Format: ”min_user_inter”: min num of inter for each user, ”fraction_removed”: fraction of interaction to remove
 "sparsify": {
   "min_user_inter": 10,
@@ -88,7 +88,7 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Test Data - Structured
 
 ```python
-#Ex: users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with agw 10 will have an age value randomly selected from 8-12)
+#Ex: users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with age 10 will have an age value randomly selected from 8-12)
 #Format: ”user or item feature”: fraction of current value that will be added or subtracted from the original value
 "transform_features": {
   "structured": {

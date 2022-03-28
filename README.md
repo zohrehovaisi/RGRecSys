@@ -25,7 +25,6 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 
 ```python
 if __name__ == '__main__':
-  all_results = {}
   for model in [“BPR”]:  #Specify model here
     dataset = "ml-100k"  #Specify dataset here
     base_config_dict = { #Specify selectively loading data here. Keys are the suffix of loaded atomic files, values are the field name list to be loaded
@@ -42,14 +41,13 @@ if __name__ == '__main__':
         }
       }
     }
-    result = train_and_test(
+    results = train_and_test(
       model=model, 
       dataset=dataset,
       robustness_tests=robustness_dict,
       base_config_dict=base_config_dict, 
       save_model=False
     )
-    all_results.append(result)
 ```
 
 Below is more examples of different robustness test formatting:

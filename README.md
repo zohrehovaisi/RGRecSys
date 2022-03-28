@@ -25,24 +25,22 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 
 ```python
 if __name__ == '__main__':
-all_results = {}
-for model in [“BPR”]:  #Specify model here
-dataset = "ml-100k"    #Specify dataset here
-base_config_dict =     #Specify selectively loading data here. Keys are the suffix of loaded atomic files, values are the list of field names to be loaded
-{
-'load_col': {'inter': ['user_id', 'item_id',
-'rating', 'timestamp'],
-'user': ['user_id', 'age', 'gender',
-'occupation'],
-'item': ['item_id', 'release_year', 'class']}
-}
-robustness_dict =      #Specify the robustnes test here. This example shows slicing based on user feature
-{
-"slice": {
-"by_feature": {
-"occupation": {"equal": "student"}
-}
-}
+  all_results = {}
+  for model in [“BPR”]:  #Specify model here
+    dataset = "ml-100k"  #Specify dataset here
+    base_config_dict = { #Specify selectively loading data here. Keys are the suffix of loaded atomic files, values are the field name list to be loaded
+
+    'load_col': {'inter': ['user_id', 'item_id', 'rating', 'timestamp'], 
+                 'user': ['user_id', 'age', 'gender','occupation'],
+                 'item': ['item_id', 'release_year', 'class']}
+    }
+    robustness_dict = {  #Specify the robustnes test here. This example shows slicing based on user feature
+
+    "slice": {
+      "by_feature": {
+        "occupation": {"equal": "student"}
+    }
+  }
 }
 results = train_and_test(model=model, dataset=dataset,
 robustness_tests=robustness_dict,

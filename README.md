@@ -57,7 +57,7 @@ Below is more examples of different robustness test formatting:
 ###### Slice Test Data by Feature
 
 ```python
-#slice of users whose occupation is student
+#Ex: slice of users whose occupation is student
 #format: ”user feature”: {“equal, min, or max”: “value”}
 "slice": {
   "by_feature": {
@@ -68,7 +68,7 @@ Below is more examples of different robustness test formatting:
 ###### Slice Test Data by Interaction
 
 ```python
-#slice of users whose number of interaction is more than 50
+#Ex: slice of users whose number of interaction is more than 50
 #format: ”user”: {“equal, min, or max”: # interactions}
 "slice": {
   "by_inter": {
@@ -80,7 +80,7 @@ Below is more examples of different robustness test formatting:
 ###### Sparsify the Training Data
 
 ```python
-#randomly drop 25% of interactions for users whose number of interaction is more than 10
+#Ex: randomly drop 25% of interactions for users whose number of interaction is more than 10
 #format: ”min_user_inter”: min num of inter for each user, ”fraction_removed”: fraction of interaction to remove
 "sparsify": {
   "min_user_inter": 10,
@@ -91,7 +91,7 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Test Data - Structured
 
 ```python
-#users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with agw 10 will have an age value randomly selected from 8-12)
+#Ex: users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with agw 10 will have an age value randomly selected from 8-12)
 #format: ”user or item feature”: fraction of current value that will be added or subtracted from the original value
 "transform_features": {
   "structured": {
@@ -104,8 +104,8 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Test Data - Random
 
 ```python
-# change 40% of user gender value to any other gender value
-# format: ”user or item feature”: fraction to change
+#Ex: change 40% of user gender value to any other gender value
+#format: ”user or item feature”: fraction to change
 "transform_features": {
   "random": {
     "gender": .40,
@@ -116,7 +116,7 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Training Interactions - Random Attack
 
 ```python
-# 10% of usser interaction are transformed to other values
+#Ex: 10% of usser interaction are transformed to other values
 #format: ”fraction_transformed”: fraction to transform
 "transform_interactions": {
   "fraction_transformed": 0.1
@@ -126,7 +126,7 @@ Below is more examples of different robustness test formatting:
 ###### Distribution Shift in the Test Set
 
 ```python
-# manipulate test set to contain 50% male and 50% female
+#Ex: manipulate test set to contain 50% male and 50% female
 #format: ”user feature”: {proportions of each feature value}
 "distribution_shift": {
   "gender": {

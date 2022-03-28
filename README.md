@@ -23,6 +23,7 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 3. Create a folder names as "saved" in RGRecSys-master folder.
 4. Specify the model, dataset, and desired robustness test in the main function of RobustnessGymRecSys.py follwing the example below:
 
+```
 if __name__ == '__main__':
 all_results = {}
 for model in [“BPR”]:  #Specify model here
@@ -46,6 +47,7 @@ robustness_dict =      #Specify the robustnes test here. This example shows slic
 results = train_and_test(model=model, dataset=dataset,
 robustness_tests=robustness_dict,
 base_config_dict=base_config_dict, save_model=False)
+```
 
 ## Cite
 

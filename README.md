@@ -33,7 +33,7 @@ if __name__ == '__main__':
         'item': ['item_id', 'release_year', 'class']
       }
     }
-    robustness_dict = {  #Specify the robustnes test here. This example shows slicing based on user feature
+    robustness_dict = {  #Specify the robustness test here. This example shows slicing based on user feature
       "slice": {
         "by_feature": {
           "occupation": {"equal": "student"}

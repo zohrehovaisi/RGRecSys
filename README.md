@@ -147,5 +147,3 @@ doi = {10.1145/3488560.3502192},
 series = {WSDM '22}
 }
 ```
-
-*Zohreh Ovaisi, Shelby Heinecke, Jia Li, Yongfeng Zhang, Elena Zheleva, and Caiming Xiong. "RGRecSys: A Toolkit for Robustness Evaluation of Recommender Systems". In Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining (WSDM '22)*

@@ -77,12 +77,12 @@ Below is more examples of different robustness test formatting:
 ###### Sparsify the Training Data
 
 ```python
-"sparsify": {
+#randomly drop 25% of interactions for users whose number of interaction is more than 10
 #”min_user_inter”: min num of inter for each user
 #”fraction_removed”: fraction of interaction to remove
-"min_user_inter": 10,
-"fraction_removed": .25
-#randomly drop 25% of interactions for users whose number of interaction is more than 10
+"sparsify": {
+  "min_user_inter": 10,
+  "fraction_removed": .25
 }
 ```
 

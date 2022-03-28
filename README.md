@@ -138,7 +138,7 @@ Below is more examples of different robustness test formatting:
 ## Cite
 
 If you aim to use RGRecSys for your research or development, please cite the following paper:
-
+```
 @inproceedings{10.1145/3488560.3502192,
 author = {Ovaisi, Zohreh and Heinecke, Shelby and Li, Jia and Zhang, Yongfeng and Zheleva, Elena and Xiong, Caiming},
 title = {RGRecSys: A Toolkit for Robustness Evaluation of Recommender Systems},
@@ -146,6 +146,6 @@ url = {https://doi-org.proxy.cc.uic.edu/10.1145/3488560.3502192},
 doi = {10.1145/3488560.3502192},
 series = {WSDM '22}
 }
-
+```
 
 *Zohreh Ovaisi, Shelby Heinecke, Jia Li, Yongfeng Zhang, Elena Zheleva, and Caiming Xiong. "RGRecSys: A Toolkit for Robustness Evaluation of Recommender Systems". In Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining (WSDM '22)*

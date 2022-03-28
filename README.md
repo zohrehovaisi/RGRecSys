@@ -56,9 +56,10 @@ Below is more examples of different robustness test formatting:
 
 ###### Slice Test Data by Feature
 
+Format: ”user feature”: {“equal, min, or max”: “value”}
+
 ```python
 #slice of users whose occupation is student
-#”user feature”: {“equal, min, or max”: “value”}
 "slice": {
   "by_feature": {
     "occupation": {"equal": "student"}

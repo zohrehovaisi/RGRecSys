@@ -23,6 +23,30 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 3. Create a folder names as "saved" in RGRecSys-master folder.
 4. Specify the model, dataset, and desired robustness test in the main function of RobustnessGymRecSys.py follwing the example below:
 
+if __name__ == '__main__':
+all_results = {}
+for model in [“BPR”]:  #Specify model here
+dataset = "ml-100k"    #Specify dataset here
+base_config_dict =     #Specify selectively loading data here. Keys are the suffix of loaded atomic files, values are the list of field names to be loaded
+{
+'load_col': {'inter': ['user_id', 'item_id',
+'rating', 'timestamp'],
+'user': ['user_id', 'age', 'gender',
+'occupation'],
+'item': ['item_id', 'release_year', 'class']}
+}
+robustness_dict =      #Specify the robustnes test here. This example shows slicing based on user feature
+{
+"slice": {
+"by_feature": {
+"occupation": {"equal": "student"}
+}
+}
+}
+results = train_and_test(model=model, dataset=dataset,
+robustness_tests=robustness_dict,
+base_config_dict=base_config_dict, save_model=False)
+
 ## Cite
 
 If you aim to use RGRecSys for your research or development, please cite the following paper:

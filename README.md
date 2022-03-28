@@ -89,12 +89,12 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Test Data - Structured
 
 ```python
-"transform_features": {
-"structured": {
-#”user or item feature”: fraction of current value that will be added or subtracted from the original value
-"age": 0.2,
 #users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with agw 10 will have an age value randomly selected from 8-12)
-}
+#”user or item feature”: fraction of current value that will be added or subtracted from the original value
+"transform_features": {
+  "structured": {
+    "age": 0.2,
+  }
 }
 ```
 
@@ -102,12 +102,12 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Test Data - Random
 
 ```python
-"transform_features": {
-"random": {
-#”user or item feature”: fraction to change
-"gender": .40,
 # change 40% of user gender value to any other gender value
-}
+#”user or item feature”: fraction to change
+"transform_features": {
+  "random": {
+    "gender": .40,
+  }
 }
 ```
 
@@ -117,7 +117,7 @@ Below is more examples of different robustness test formatting:
 # 10% of usser interaction are transformed to other values
 #”fraction_transformed”: fraction to transform
 "transform_interactions": {
-    "fraction_transformed": 0.1
+  "fraction_transformed": 0.1
 }
 ```
 
@@ -127,7 +127,7 @@ Below is more examples of different robustness test formatting:
 # manipulate test set to contain 50% male and 50% female
 #”user feature”: {proportions of each feature value}
 "distribution_shift": {
-    "gender": {
+  "gender": {
     "M": .5,
     "F": .5
   }

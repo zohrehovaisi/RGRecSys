@@ -125,8 +125,9 @@ Below is more examples of different robustness test formatting:
 
 ```python
 # manipulate test set to contain 50% male and 50% female
+#”user feature”: {proportions of each feature value}
 "distribution_shift": {
-    "gender": { #”user feature”: {proportions of each feature value}
+    "gender": {
     "M": .5,
     "F": .5
   }

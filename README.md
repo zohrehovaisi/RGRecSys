@@ -32,7 +32,8 @@ if __name__ == '__main__':
       'load_col': {
         'inter': ['user_id', 'item_id', 'rating', 'timestamp'], 
         'user': ['user_id', 'age', 'gender','occupation'],
-        'item': ['item_id', 'release_year', 'class']}
+        'item': ['item_id', 'release_year', 'class']
+      }
     }
     robustness_dict = {  #Specify the robustnes test here. This example shows slicing based on user feature
       "slice": {

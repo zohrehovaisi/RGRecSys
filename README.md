@@ -53,6 +53,18 @@ Below is more examples of different robustness test formatting:
 
 ###### Slice Test Data by Feature
 
+```python
+"slice": {
+"by_feature": {
+#”user feature”: {“equal, min, or max”: “value”}
+"occupation": {"equal": "student"}
+#slice of users whose occupation is student
+}
+}
+```
+
+
+
 ## Cite
 
 If you aim to use RGRecSys for your research or development, please cite the following paper:

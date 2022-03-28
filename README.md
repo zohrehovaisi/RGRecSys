@@ -62,6 +62,77 @@ Below is more examples of different robustness test formatting:
 }
 }
 ```
+###### Slice Test Data by Interaction
+
+```python
+"slice": {
+"by_inter": {
+#”user”: {“equal, min, or max”: # interactions}
+"user": {"min": 50}
+#slice of users whose number of interaction is more than 50
+}
+}
+```
+
+###### Sparsify the Training Data
+
+```python
+"sparsify": {
+#”min_user_inter”: min num of inter for each user
+#”fraction_removed”: fraction of interaction to remove
+"min_user_inter": 10,
+"fraction_removed": .25
+#randomly drop 25% of interactions for users whose number of interaction is more than 10
+}
+```
+
+###### Transform the Test Data - Structured
+
+```python
+"transform_features": {
+"structured": {
+#”user or item feature”: fraction of current value that will be added or subtracted from the original value
+"age": 0.2,
+#users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with agw 10 will have an age value randomly selected from 8-12)
+}
+}
+```
+
+
+###### Transform the Test Data - Random
+
+```python
+"transform_features": {
+"random": {
+#”user or item feature”: fraction to change
+"gender": .40,
+# change 40% of user gender value to any other gender value
+}
+}
+```
+
+###### Transform the Training Interactions - Random Attack
+
+```python
+"transform_interactions": {
+#”fraction_transformed”: fraction to transform
+"fraction_transformed": 0.1
+# 10% of usser interaction are transformed to other values
+}
+```
+
+###### Distribution Shift in the Test Set
+
+```python
+"distribution_shift": {
+#”user feature”: {proportions of each feature value}
+"gender": {
+"M": .5,
+"F": .5
+# manipulate test set to contain 50% male and 50% female
+}
+}
+```
 
 
 

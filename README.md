@@ -114,10 +114,10 @@ Below is more examples of different robustness test formatting:
 ###### Transform the Training Interactions - Random Attack
 
 ```python
-"transform_interactions": {
-#”fraction_transformed”: fraction to transform
-"fraction_transformed": 0.1
 # 10% of usser interaction are transformed to other values
+#”fraction_transformed”: fraction to transform
+"transform_interactions": {
+    "fraction_transformed": 0.1
 }
 ```
 

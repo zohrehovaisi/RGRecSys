@@ -23,4 +23,14 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 3. Create a folder names as "saved" in RGRecSys-master folder.
 4. Specify the model, dataset, and desired robustness test in the main function of RobustnessGymRecSys.py follwing the example below:
 
+## Cite
 
+If you aim to use RGRecSys for your research or development, please cite the following paper:
+
+
+@inproceedings{10.1145/3488560.3502192,
+author = {Ovaisi, Zohreh and Heinecke, Shelby and Li, Jia and Zhang, Yongfeng and Zheleva, Elena and Xiong, Caiming},
+title = {RGRecSys: A Toolkit for Robustness Evaluation of Recommender Systems},
+year = {2022},
+series = {WSDM '22}
+}

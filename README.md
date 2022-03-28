@@ -1,7 +1,6 @@
 # RGRecSys
 RGRecSys is developed using [RecBole library](https://dl.acm.org/doi/abs/10.1145/3459637.3482016) built-in models and covers several models from general and context-aware recommender systems. It has a robustness evaluation module that allows users to easily and uniformly evaluate recommender system robustness. 
 ## Requirements
-As RGRecSys is built using the RecBole library, it has the same requirements as RecBole:
 
 - python >= 3.7 
 - torch >= 1.7.0

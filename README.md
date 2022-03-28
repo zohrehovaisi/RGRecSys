@@ -28,4 +28,4 @@ As RGRecSys is built using the RecBole library, it has the same requirements as 
 If you aim to use RGRecSys for your research or development, please cite the following paper:
 
 
-Zohreh Ovaisi, Shelby Heinecke, Jia Li, Yongfeng Zhang, Elena Zheleva, and Caiming Xiong. 2022. RGRecSys: A Toolkit for Robustness Evaluation of Recommender Systems. In Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining (WSDM '22)
+Zohreh Ovaisi, Shelby Heinecke, Jia Li, Yongfeng Zhang, Elena Zheleva, and Caiming Xiong. "RGRecSys: A Toolkit for Robustness Evaluation of Recommender Systems". In Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining (WSDM '22)

@@ -17,10 +17,10 @@ RGRecSys is developed using [RecBole library](https://dl.acm.org/doi/abs/10.1145
 
 ## Usage
 
-1. If you want to use datasets other than *ml-100k*, you need to use recbole library to get the atomic files. Otherwise, you can skip this step. The atomic files provides a data representation for different recommendation algorithms including .INTER, .USER, and .ITEM. See [this](https://dl.acm.org/doi/abs/10.1145/3459637.3482016) for more information.
-2. Download the recbole folder from v0.2.1 of RecBole library from [here](https://github.com/RUCAIBox/RecBole/archive/refs/tags/v0.2.1.zip) and locate it in the main folder you downloaded from our github (RGRecSys-master).
-3. Create a folder names as "saved" in RGRecSys-master folder.
-4. Specify the model, dataset, and desired robustness test in the main function of RobustnessGymRecSys.py follwing the example below:
+1. If you want to use datasets other than *ml-100k*, you need to use RecBole library to get the atomic files. Otherwise, you can skip this step. The atomic files provide a data representation for different recommendation algorithms including .INTER, .USER, and .ITEM. See [this](https://dl.acm.org/doi/abs/10.1145/3459637.3482016) for more information.
+2. Download folder *recbole* from v0.2.1 of RecBole library from [here](https://github.com/RUCAIBox/RecBole/archive/refs/tags/v0.2.1.zip) and locate it in the main folder you downloaded from our GitHub (RGRecSys-master).
+3. Create a folder named as "saved" in the RGRecSys-master folder.
+4. Specify the model, dataset, and desired robustness test in the main function of the RobustnessGymRecSys.py following  the example below:
 
 ```python
 if __name__ == '__main__':

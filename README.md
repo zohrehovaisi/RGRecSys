@@ -69,7 +69,7 @@ Below is more examples of different robustness test formatting:
 
 ```python
 #slice of users whose number of interaction is more than 50
-#”user”: {“equal, min, or max”: # interactions}
+#format: ”user”: {“equal, min, or max”: # interactions}
 "slice": {
   "by_inter": {
     "user": {"min": 50}
@@ -81,8 +81,7 @@ Below is more examples of different robustness test formatting:
 
 ```python
 #randomly drop 25% of interactions for users whose number of interaction is more than 10
-#”min_user_inter”: min num of inter for each user
-#”fraction_removed”: fraction of interaction to remove
+#format: ”min_user_inter”: min num of inter for each user, ”fraction_removed”: fraction of interaction to remove
 "sparsify": {
   "min_user_inter": 10,
   "fraction_removed": .25
@@ -93,7 +92,7 @@ Below is more examples of different robustness test formatting:
 
 ```python
 #users age will be replaced with a value between 0.8 of their original age to 1.2 of their original age (user with agw 10 will have an age value randomly selected from 8-12)
-#”user or item feature”: fraction of current value that will be added or subtracted from the original value
+#format: ”user or item feature”: fraction of current value that will be added or subtracted from the original value
 "transform_features": {
   "structured": {
     "age": 0.2,
@@ -106,7 +105,7 @@ Below is more examples of different robustness test formatting:
 
 ```python
 # change 40% of user gender value to any other gender value
-#”user or item feature”: fraction to change
+# format: ”user or item feature”: fraction to change
 "transform_features": {
   "random": {
     "gender": .40,
@@ -118,7 +117,7 @@ Below is more examples of different robustness test formatting:
 
 ```python
 # 10% of usser interaction are transformed to other values
-#”fraction_transformed”: fraction to transform
+#format: ”fraction_transformed”: fraction to transform
 "transform_interactions": {
   "fraction_transformed": 0.1
 }
@@ -128,7 +127,7 @@ Below is more examples of different robustness test formatting:
 
 ```python
 # manipulate test set to contain 50% male and 50% female
-#”user feature”: {proportions of each feature value}
+#format: ”user feature”: {proportions of each feature value}
 "distribution_shift": {
   "gender": {
     "M": .5,

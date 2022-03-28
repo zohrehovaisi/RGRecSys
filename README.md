@@ -3,6 +3,7 @@ RGRecSys is developed using v0.2.1. version of [RecBole library](https://github.
 ## Requirements
 As RGRecSys is built using the RecBole library, it has the same requirements as RecBole:
 
+- python>=3.7 
 - torch>=1.7.0
 - numpy>=1.17.2
 - scipy==1.6.0
